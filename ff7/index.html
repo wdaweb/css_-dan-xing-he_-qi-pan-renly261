@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: url(./bg-full.jpg) no-repeat center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 1200px;
+            height: 600px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+
+        }
+
+        .leftbox {
+            width: 600px;
+            height: 600px;
+            background: url(./main.jpg) no-repeat center/cover;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ps4 {
+            width: 150px;
+            height: 260px;
+        }
+
+        .ps4Text::first-line {
+            color: white;
+            font-size: 2rem;
+            /* !問題 為啥不能用 align-content */
+            text-align: center;
+        }
+
+        .ps4Text {
+            color: white;
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        .rightbox {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rightbox1 {
+            width: 600px;
+            height: 300px;
+            background: gray;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .cloud {
+            width: 250px;
+            height: 250px;
+            align-self: flex-end
+        }
+
+        .cloudText::first-line {
+            color: black;
+            font-size: 2rem;
+        }
+
+        .cloudText {
+            color: black;
+            margin-left: 30px;
+        }
+
+        .rightbox2 {
+            width: 600px;
+            height: 300px;
+            background: black;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .tifa {
+            width: 250px;
+            height: 250px;
+            align-self: flex-end;
+        }
+
+        .tifaText::first-line {
+            color: white;
+            font-size: 2rem;
+            text-align: left;
+        }
+
+        .tifaText {
+            color: white;
+            text-align: center;
+            text-align: left;
+            margin-right: 15px;
+            position: absolute;
+            left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="leftbox">
+            <img class="ps4" src="./ps4-ff7.png">
+            <p class="ps4Text">AVAILABLE NOW<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
+                saepe illo ratione voluptas hic unde, recusandae esse amet tempora quasi labore sunt alias est ut iste
+                praesentium nihil placeat quidem.</p>
+        </div>
+        <div class="rightbox">
+            <div class="rightbox1">
+                <p class="cloudText">Cloud<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sequi enim
+                    facilis, ullam a modi nihil perspiciatis distinctio soluta illo magni inventore amet atque.
+                    Voluptate fugit nemo laborum odio itaque.</p>
+                <img class="cloud" src="./cloud.png">
+            </div>
+            <div class="rightbox2">
+                <img class="tifa" src="./tifa.png">
+                <p class="tifaText">Tifa<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corrupti
+                    laborum vel ex earum id, consectetur quos quas accusamus, commodi ipsum suscipit ullam, fuga beatae
+                    dolorem doloremque quo? Ut, labore!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

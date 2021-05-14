@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outText {
+            writing-mode: vertical-lr;
+            font-size: 2rem;
+            margin: 30px;
+        }
+
+        .container {
+            width: 800px;
+            height: 800px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        table {
+            width: 700px;
+            height: 700px;
+            border-spacing: 0;
+
+        }
+
+        td {
+            border: 1px solid black;
+
+        }
+
+        .text {
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        .inText1 {
+            font-size: 2.5rem;
+            position: absolute;
+            left: 22%;
+        }
+
+        .inText2 {
+            font-size: 2.5rem;
+            position: absolute;
+            left: 65%;
+        }
+
+        .chessLine1 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px 0 15px;
+            position: absolute;
+            top: 2%;
+        }
+
+        .chessLine2 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 105px 0 105px;
+            position: absolute;
+            top: 21%;
+        }
+
+        .chessLine3 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px 0 15px;
+            position: absolute;
+            top: 31%;
+        }
+
+        .chessLine4 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px 0 15px;
+            position: absolute;
+            top: 90%;
+        }
+
+        .chessLine5 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 105px 0 105px;
+            position: absolute;
+            top: 70%;
+        }
+
+        .chessLine6 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px 0 15px;
+            position: absolute;
+            top: 60%;
+        }
+
+        .chess1 {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid black;
+            font-size: 40px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .chess2 {
+            width: 60px;
+            height: 60px;
+            color: red;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid black;
+            font-size: 40px;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .cross1::before {
+            content: '';
+            width: 1px;
+            height: 234px;
+            transform: rotate(48deg);
+            position: absolute;
+            top: 1%;
+            left: 50%;
+            background: black;
+            z-index: -1;
+        }
+
+        .cross1::after {
+            content: '';
+            width: 1px;
+            height: 237px;
+            transform: rotate(-48.5deg);
+            position: absolute;
+            top: 0.8%;
+            left: 49.5%;
+            background: black;
+            z-index: -1;
+        }
+
+        .cross2::before {
+            content: '';
+            width: 1px;
+            height: 230px;
+            transform: rotate(48.5deg);
+            position: absolute;
+            top: 69.5%;
+            left: 50%;
+            background: black;
+            z-index: -1;
+        }
+
+        .cross2::after {
+            content: '';
+            width: 1px;
+            height: 234px;
+            transform: rotate(-48.5deg);
+            position: absolute;
+            top: 69.5%;
+            left: 50%;
+            background: black;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="outText">棋盤裡，車無輪，馬無糧，叫聲將軍提防提防</p>
+
+    <div class="container">
+        <div class="chessLine1">
+            <div class="chess1">車</div>
+            <div class="chess1">馬</div>
+            <div class="chess1">象</div>
+            <div class="chess1">士</div>
+            <div class="chess1">將</div>
+            <div class="chess1">士</div>
+            <div class="chess1">象</div>
+            <div class="chess1">馬</div>
+            <div class="chess1">車</div>
+        </div>
+
+        <div class="chessLine2">
+            <div class="chess1">包</div>
+            <div class="chess1">包</div>
+        </div>
+
+        <div class="chessLine3">
+            <div class="chess1">卒</div>
+            <div class="chess1">卒</div>
+            <div class="chess1">卒</div>
+            <div class="chess1">卒</div>
+            <div class="chess1">卒</div>
+        </div>
+
+        <div class="chessLine4">
+            <div class="chess2">俥</div>
+            <div class="chess2">傌</div>
+            <div class="chess2">相</div>
+            <div class="chess2">仕</div>
+            <div class="chess2">帥</div>
+            <div class="chess2">仕</div>
+            <div class="chess2">相</div>
+            <div class="chess2">傌</div>
+            <div class="chess2">俥</div>
+        </div>
+
+        <div class="chessLine5">
+            <div class="chess2">炮</div>
+            <div class="chess2">炮</div>
+        </div>
+
+        <div class="chessLine6">
+            <div class="chess2">兵</div>
+            <div class="chess2">兵</div>
+            <div class="chess2">兵</div>
+            <div class="chess2">兵</div>
+            <div class="chess2">兵</div>
+        </div>
+
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="cross1"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <p class="inText1">楚河</p>
+                <td colspan="8"></td>
+                <p class="inText2">漢界</p>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="cross2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <p class="outText">圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</p>
+</body>
+
+</html>
